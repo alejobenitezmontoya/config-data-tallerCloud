@@ -13,3 +13,7 @@ spring:
       password: ${CONFIG_PASSWORD}
 server:
   port: 9002
+eureka:
+  client:
+    serviceUrl:
+      defaultZone: http://localhost:9005/eureka/
