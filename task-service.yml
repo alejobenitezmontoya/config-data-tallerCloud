@@ -1,11 +1,6 @@
 spring:
   application:
     name: task-service
-  datasource:
-    driver-class-name: org.postgresql.Driver
-    url: jdbc:postgresql://localhost/taller-cloud
-    username: postgres
-    password: password
   jpa:
     hibernate:
       ddl-auto: update
