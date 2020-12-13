@@ -14,7 +14,7 @@ spring:
   boot:
     admin:
       client:
-        url: http://localhost/9015
+        url: http://localhost:9015
 server:
   port: 9002
 eureka:
