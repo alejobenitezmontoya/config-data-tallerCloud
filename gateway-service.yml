@@ -1,0 +1,31 @@
+server:
+  port: 9010
+eureka:
+  client:
+    serviceUrl:
+      defaultZone: http://localhost:9005/eureka/
+spring:
+  application:
+    name: gateway-service
+  cloud:
+    config:
+      uri: http://localhost:9000
+      name: ${CONFIG_USER}
+      password: ${CONFIG_PASSWORD}
+    gateway:
+      discovery:
+        locator:
+          enabled: true
+      routes:
+      - id: backlog-service
+        uri: lb://backlog-service
+        predicates:
+        - Path=/backlog/**
+      - id: project-service
+        uri: lb://project-service
+        predicates:
+        - Path=/project/**
+      - id: task-service
+        uri: lb://task-service
+        predicates:
+        - Path=/task/**        
