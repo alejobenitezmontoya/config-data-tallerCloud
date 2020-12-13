@@ -11,6 +11,10 @@ spring:
       uri: http://localhost:9000
       name: ${CONFIG_USER}
       password: ${CONFIG_PASSWORD}
+  boot:
+    admin:
+      client:
+        url: http://localhost:/9015      
 server:
   port: 9003
 eureka:
